@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 100%;
+    /* Set container to take full width */
+    max-width: 1337px;
+    /* Maintain a maximum width for large screens */
+    /* width: 1337px; */
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* css for the text above the product images */
+.Tisso-txt {
+    font-size: 36px;
+    text-align: left;
+    font-weight: 400;
+    font-family: 'Lustria';
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2px;
+    /* Add spacing between grid items */
+}
+
+/* each 6 product section css */
+.section {
+    width: calc(33.33% - 20px);
+    /* 3 products per row with spacing */
+    /* width: 433px; */
+    height: 444px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    position: relative;
+    box-sizing: border-box;
+    /* Include padding and border in width/height */
+}
+
+/* as the image should take whole space  */
+.section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* code for changing on hover effect when click on customizer */
+.customizer:hover {
+    cursor: pointer;
+}
+
+
+.customizer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Product 1 plus icon position can be set from here */
+.section:nth-child(1) .customizer {
+    top: 56%;
+    left: 62%;
+}
+
+/* Product 2 plus icon position can be set from here*/
+.section:nth-child(2) .customizer {
+    top: 55%;
+    left: 85%;
+}
+
+/* Product 3 plus icon position can be set from here*/
+.section:nth-child(3) .customizer {
+    top: 22%;
+    left: 63%;
+}
+
+/* Product 4 plus icon position can be set from here*/
+.section:nth-child(4) .customizer {
+    top: 20%;
+    left: 73%;
+}
+
+/* Product 5 plus icon position can be set from here*/
+.section:nth-child(5) .customizer {
+    top: 28%;
+    left: 53%;
+}
+
+/* Product 6 plus icon position can be set from here*/
+.section:nth-child(6) .customizer {
+    top: 40%;
+    left: 75%;
+}
+
+.customizer img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+/* styles of the popup window of the products */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup-content {
+    background: #fff;
+    width: 311px;
+    height: 447px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.popup-layout {
+    display: flex;
+    align-items: flex-start;
+}
+
+.popup-image {
+    width: 120px;
+    height: 140px;
+    margin-right: 10px;
+}
+
+.popup-details {
+    flex: 1;
+}
+
+.popup-name {
+    font-size: 16px;
+    margin: 3 0 4px;
+    font-weight: 300;
+}
+
+.popup-price {
+    font-size: 16px;
+    text-decoration: double;
+    color: #444;
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-weight: bold;
+}
+
+.popup-description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Color Section */
+.color-section {
+    margin-top: 20px;
+}
+
+.color-buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.color-button {
+    width: 148px;
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.color-button.active {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+}
+
+
+
+/* Add hover effect */
+.color-button:hover {
+    background-color: #f0f0f0;
+    color: #000;
+}
+
+/* Size Section */
+.size-section {
+    margin: 20px 0;
+
+}
+
+.size-dropdown {
+    width: 100%;
+    padding: 5px;
+    height: 50px;
+}
+
+
+.add-to-cart {
+    width: 100%;
+    height: 45px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between text and arrow */
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: relative;
+}
+
+.add-to-cart:hover {
+    background-color: #333; /* Darker shade for hover effect */
+}
+
+
+/* Style for the text inside the button */
+.add-to-cart-text {
+    flex: 1; /* Ensures text is centered and takes up all available space */
+    text-align: center;
+}
+
+/* Arrow icon styling */
+.add-to-cart .arrow-icon {
+    position: absolute;
+    width: 33.7px;
+    right: 40px; /* Position arrow to the far right */
+  
+    height: 16px;
+    object-fit: contain;
+}
+
+
+
+
+
+
+/* Responsive styles for different screen sizes */
+
+/* Breakpoint for tablets (2 products per row) */
+@media (max-width: 1024px) {
+    .section {
+        width: calc(50% - 20px);
+        /* 2 products per row */
+    }
+}
+
+/* Breakpoint for small devices (1 product per row) */
+@media (max-width: 768px) {
+    .section {
+        width: 100%;
+        /* 1 product per row */
+    }
+}
