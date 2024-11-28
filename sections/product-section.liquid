@@ -1,6 +1,100 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+{% comment %}
+  {% schema %}
+    {
+      "name": "Section name",
+      "settings": []
+    }
+  {% endschema %}
+{% endcomment %}
+
+<!--
+  Lets Create a main container in which there will be six grids
+  representing each product
+-->
+<div class="container">
+  <p class="Tisso-txt">Tisso vison in the wild</p>
+
+  <!-- main grid in which 6 sections are there -->
+  <div class="grid">
+    <!-- Product 1 -->
+    <div class="section">
+      <div class="customizer" onclick="openPopup(0)">
+        <img src="assets/images/plus.png" alt="Plus Icon">
+      </div>
+      <img src="assets/images/image 822.png" alt="Product 1">
+    </div>
+    <!-- Product 2 -->
+    <div class="section">
+      <div class="customizer" onclick="openPopup(1)">
+        <img src="assets/images/plus.png" alt="Plus Icon">
+      </div>
+      <img src="assets/images/image 823.png" alt="Product 2">
+    </div>
+    <!-- Product 3 -->
+    <div class="section">
+      <div class="customizer" onclick="openPopup(2)">
+        <img src="assets/images/plus.png" alt="Plus Icon">
+      </div>
+      <img src="assets/images/image 824.png" alt="Product 3">
+    </div>
+    <!-- Product 4 -->
+    <div class="section">
+      <div class="customizer" onclick="openPopup(3)">
+        <img src="assets/images/plus.png" alt="Plus Icon">
+      </div>
+      <img src="assets/images/image 825.png" alt="Product 4">
+    </div>
+    <!-- Product 5 -->
+    <div class="section">
+      <div class="customizer" onclick="openPopup(4)">
+        <img src="assets/images/plus.png" alt="Plus Icon">
+      </div>
+      <img src="assets/images/image 826.png" alt="Product 5">
+    </div>
+    <!-- Product 6 -->
+    <div class="section">
+      <div class="customizer" onclick="openPopup(5)">
+        <img src="assets/images/plus.png" alt="Plus Icon">
+      </div>
+      <img src="assets/images/image 827.png" alt="Product 6">
+    </div>
+  </div>
+</div>
+
+<!-- Popup Section -->
+
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <div class="popup-layout">
+      <img id="popup-image" src="" alt="Product Image" class="popup-image">
+      <div class="popup-details">
+        <h3 id="popup-name" class="popup-name"></h3>
+        <p id="popup-price" class="popup-price"></p>
+        <p id="popup-description" class="popup-description"></p>
+      </div>
+    </div>
+    <div class="color-section">
+      <p>Color</p>
+      <div id="color-buttons-container" class="color-buttons-container"></div>
+    </div>
+
+    <div class="size-section">
+      <p>Size</p>
+      <select id="popup-size" class="size-dropdown">
+        <option value="" disabled selected>Choose Your Size</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+    </div>
+
+    <!-- <button class="add-to-cart">Add to Cart</button> -->
+    <button class="add-to-cart">
+      Add to Cart
+      <img src="assets/images/Line 15.png" alt="Arrow" class="arrow-icon">
+    </button>
+  </div>
+</div>
