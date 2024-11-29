@@ -8,10 +8,6 @@
 
     <link rel="stylesheet" href="{{ 'custom-style.css' | asset_url }}">
 
-    {% section 'product-section' %}
-
-    {% section 'custom-product-grid' %}
-
     <link rel="canonical" href="{{ canonical_url }}">
 
     {%- if settings.favicon != blank -%}
@@ -315,6 +311,9 @@
     {%- endif -%}
 
     {% sections 'header-group' %}
+    {% section 'product-section' %}
+
+    {% section 'custom-product-grid' %}
 
     <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
       {{ content_for_layout }}
