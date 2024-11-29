@@ -11,14 +11,15 @@
   "sections": {
     "main": {
       "type": "main-page",
-      "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
-      }
+      "settings": {}
+    },
+    "custom-product-grid": {
+      "type": "custom-product-grid",
+      "settings": {}
     }
   },
   "order": [
-    "main"
-    
+    "main",
+    "custom-product-grid"
   ]
 }
