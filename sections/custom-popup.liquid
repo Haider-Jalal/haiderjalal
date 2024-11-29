@@ -1,6 +1,10 @@
 {% comment %}
   Custom Popup Section
 {% endcomment %}
+
+<link rel="stylesheet" href="{{ 'custom-style.css' | asset_url }}">
+<script src="{{ 'custom-script.js' | asset_url }}" defer></script>
+
 <div id="popup" class="popup hidden">
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
