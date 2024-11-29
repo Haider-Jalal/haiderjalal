@@ -12,20 +12,9 @@
     "main": {
       "type": "main-page",
       "settings": {}
-    },
-    
-    "custom-product-grid": {
-      "type": "custom-product-grid",
-      "settings": {}
-    },
-     "product-section": {
-      "type": "product-section",
-      "settings": {}
     }
   },
   "order": [
-    "main",
-    "custom-product-grid",
-    "product-section"
+    "main"
   ]
 }
