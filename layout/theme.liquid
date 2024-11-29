@@ -11,7 +11,7 @@
     {% section 'product-section' %}
 
     <link rel="stylesheet" href="{{ 'custom-style.css' | asset_url }}">
-    <script src="{{ 'custom-script.js' | asset_url }}" defer></script>
+
     {% section 'custom-product-grid' %}
 
     <link rel="canonical" href="{{ canonical_url }}">
@@ -381,5 +381,6 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    <script src="{{ 'custom-script.js' | asset_url }}" defer></script>
   </body>
 </html>
