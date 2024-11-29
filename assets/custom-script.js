@@ -69,64 +69,6 @@ const products = [
 
 
 
-// let currentProductIndex = null; // Keeps track of the currently opened product
-// let selectedColor = null; // Tracks the currently selected color
-
-// // Function to open the popup
-// function openPopup(index) {
-//     // Set the current product index
-//     currentProductIndex = index;
-//     selectedColor = null; // Reset selected color
-
-//     // Get product data
-//     const product = products[index];
-
-//     // Set popup content dynamically
-//     document.getElementById("popup-name").textContent = product.name;
-//     document.getElementById("popup-price").textContent = product.price;
-//     document.getElementById("popup-description").textContent = product.description;
-
-//     // Set the default image (white variant)
-//     document.getElementById("popup-image").src = product.images.white;
-
-//     // Remove active state from both color buttons
-//     const colorButtons = document.querySelectorAll(".color-button");
-//     colorButtons.forEach((btn) => btn.classList.remove("active"));
-
-//     // Show the popup
-//     document.getElementById("popup").classList.remove("hidden");
-// }
-
-// // Function to close the popup
-// function closePopup() {
-//     document.getElementById("popup").classList.add("hidden");
-// }
-
-// // Function to change the product image based on color selection
-// function changeColor(colorIndex) {
-//     // Ensure there's a current product loaded
-//     if (currentProductIndex === null) return;
-
-//     // Get the product data
-//     const product = products[currentProductIndex];
-
-//     // Update the image and selected color based on the clicked button
-//     if (colorIndex === 0) {
-//         document.getElementById("popup-image").src = product.images.white;
-//         selectedColor = "white";
-//     } else if (colorIndex === 1) {
-//         document.getElementById("popup-image").src = product.images.black;
-//         selectedColor = "black";
-//     }
-
-//     // Update button styles
-//     const colorButtons = document.querySelectorAll(".color-button");
-//     colorButtons.forEach((btn, idx) => {
-//         btn.classList.toggle("active", idx === colorIndex);
-//     });
-// }
-
-
 // Function to open popup and populate product details
 function openPopup(index) {
     const product = products[index];
