@@ -6,7 +6,7 @@ const products = [
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
             { name: "White", image: "{{ 'image_822.png' | asset_url }}" },
-            { name: "Black", image: "{{ 'image_822-1.jpeg' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_822-1.jpeg' | asset_url }}" }
         ],
         image: "{{ 'image_822.png' | asset_url }} ", // Default image
     },
@@ -16,7 +16,7 @@ const products = [
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
             { name: "Blue", image: "{{ 'image_823.png' | asset_url }}" },
-            { name: "Black", image: "{{ 'image_823-1.jpeg' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_823-1.jpeg' | asset_url }}" }
         ],
         image: "{{ 'image_823.png' | asset_url }}", // Default image
     },
@@ -26,7 +26,7 @@ const products = [
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
             { name: "Red", image: "{{ 'image_824.png' | asset_url }}" },
-            { name: "Grey", image: "{{ 'image_824-1.jpeg' | asset_url }}" },
+            { name: "Grey", image: "{{ 'image_824-1.jpeg' | asset_url }}" }
         ],
         image: "{{ 'image_824.png' | asset_url }}", // Default image
     },
@@ -36,7 +36,7 @@ const products = [
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
             { name: "White", image: "{{ 'image_825.png' | asset_url }}" },
-            { name: "Black", image: "{{ 'image_825-1.jpeg' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_825-1.jpeg' | asset_url }}" }
         ],
         image: "{{ 'image_825.png' | asset_url }}", // Default image
     },
@@ -46,7 +46,7 @@ const products = [
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
             { name: "Grey", image: "{{ 'image_826.png' | asset_url }}" },
-            { name: "Black", image: "{{ 'image_826-1.jpeg' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_826-1.jpeg' | asset_url }}" }
         ],
         image: "{{ 'image_826.png' | asset_url }}", // Default image
     },
@@ -56,7 +56,7 @@ const products = [
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
             { name: "Blue", image: "{{ 'image_827.png' | asset_url }}" },
-            { name: "Black", image: "{{ 'image_827-1.jpeg' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_827-1.jpeg' | asset_url }}" }
         ],
         image: "{{ 'image_827.png' | asset_url }}", // Default image
     }
