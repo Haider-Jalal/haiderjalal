@@ -64,33 +64,68 @@ const products = [
 
 
 
-// Function to open popup and populate product details
+// JavaScript function to open the popup and populate product details dynamically
 function openPopup(index) {
-    const product = products[index];
+    const product = products[index]; // Grab the product object
     const popup = document.getElementById("popup");
     const colorButtonsContainer = document.getElementById("color-buttons-container");
 
-    // Populate product details
+    // Populate the product data into the popup
     document.getElementById("popup-name").textContent = product.name;
     document.getElementById("popup-price").textContent = product.price;
     document.getElementById("popup-description").textContent = product.description;
     document.getElementById("popup-image").src = product.image;
 
     // Clear existing color buttons
-    colorButtonsContainer.innerHTML = "";
+    colorButtonsContainer.innerHTML = '';
 
     // Add color buttons dynamically
     product.colors.forEach((color, colorIndex) => {
-        const button = document.createElement("button");
-        button.className = "color-button";
+        const button = document.createElement('button');
+        button.className = 'color-button';
         button.textContent = color.name;
-        button.onclick = () => changeColor(index, colorIndex); // Pass product and color index
+        button.onclick = () => changeColor(index, colorIndex);
         colorButtonsContainer.appendChild(button);
     });
 
     // Show popup
-    popup.classList.remove("hidden");
+    popup.classList.remove('hidden');
 }
+
+
+
+
+
+
+
+
+// Function to open popup and populate product details
+// function openPopup(index) {
+//     const product = products[index];
+//     const popup = document.getElementById("popup");
+//     const colorButtonsContainer = document.getElementById("color-buttons-container");
+
+//     // Populate product details
+//     document.getElementById("popup-name").textContent = product.name;
+//     document.getElementById("popup-price").textContent = product.price;
+//     document.getElementById("popup-description").textContent = product.description;
+//     document.getElementById("popup-image").src = product.image;
+
+//     // Clear existing color buttons
+//     colorButtonsContainer.innerHTML = "";
+
+//     // Add color buttons dynamically
+//     product.colors.forEach((color, colorIndex) => {
+//         const button = document.createElement("button");
+//         button.className = "color-button";
+//         button.textContent = color.name;
+//         button.onclick = () => changeColor(index, colorIndex); // Pass product and color index
+//         colorButtonsContainer.appendChild(button);
+//     });
+
+//     // Show popup
+//     popup.classList.remove("hidden");
+// }
 
 // Function to handle color change
 function changeColor(productIndex, colorIndex) {
