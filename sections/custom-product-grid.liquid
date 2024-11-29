@@ -1,6 +1,48 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
-{% endschema %}
+<div class="container">
+  <p class="Tisso-txt">Tisso Vision in the Wild</p>
+  <div class="grid">
+    <!-- Loop through products -->
+    {% for product in products %}
+      <div class="section">
+        <div class="customizer" onclick="openPopup({{ forloop.index0 }})">
+          <img src="{{ 'plus.png' | asset_url }}" alt="Plus Icon">
+        </div>
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Popup Section -->
+  <div id="popup" class="popup hidden">
+    <div class="popup-content">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <div class="popup-layout">
+        <img id="popup-image" src="" alt="Product Image" class="popup-image">
+        <div class="popup-details">
+          <h3 id="popup-name" class="popup-name"></h3>
+          <p id="popup-price" class="popup-price"></p>
+          <p id="popup-description" class="popup-description"></p>
+        </div>
+      </div>
+      <div class="color-section">
+        <p>Color</p>
+        <div id="color-buttons-container" class="color-buttons-container"></div>
+      </div>
+      <div class="size-section">
+        <p>Size</p>
+        <select id="popup-size" class="size-dropdown">
+          <option value="" disabled selected>Choose Your Size</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </div>
+      <button class="add-to-cart">
+        Add to Cart
+        <img src="{{ 'Line 15.png' | asset_url }}" alt="Arrow" class="arrow-icon">
+      </button>
+    </div>
+  </div>
+</div>
