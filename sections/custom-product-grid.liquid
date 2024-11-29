@@ -8,9 +8,9 @@
     {% for product in collections[section.settings.collection].products limit: 6 %}
       <div class="section">
         <div class="customizer" onclick="openPopup({{ forloop.index0 }})">
-          <img src="{{ 'plus.png' | asset_url }}" alt="Plus Icon">
+          <img src="{{ 'plus.png' | asset_url }}" alt="Plus Icon" width="50" height="50">
         </div>
-        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+        <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" width="300" height="300">
       </div>
     {% endfor %}
   </div>
