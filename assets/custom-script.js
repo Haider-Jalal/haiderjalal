@@ -4,66 +4,61 @@ const products = [
         name: "Orange Wide Leg",
         price: "980,00€",
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
-        // images: { white: "assets/images/image 822.png", black: "assets/images/image 822-1.jpeg" },
         colors: [
-            { name: "White", image: "assets/images/image 822.png" },
-            { name: "Black", image: "assets/images/image 822-1.jpeg" },
+            { name: "White", image: "{{ 'image_822.png' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_822-1.jpeg' | asset_url }}" },
         ],
-        image: "assets/images/image 822.png", // Default image
+        image: "{{ 'image_822.png' | asset_url }}", // Default image
     },
     {
-
         name: "Tailored Jacket",
         price: "980,00€",
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
-            { name: "Blue", image: "assets/images/image 823.png" },
-            { name: "Black", image: "assets/images/image 823-1.jpeg" },
+            { name: "Blue", image: "{{ 'image_823.png' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_823-1.jpeg' | asset_url }}" },
         ],
-        image: "assets/images/image 823.png", // Default image
-
+        image: "{{ 'image_823.png' | asset_url }}", // Default image
     },
     {
         name: "Accordion Pleated Dress",
         price: "980,00€",
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
-        // images: { white: "assets/images/image 824.png", black: "assets/images/image 824.png" }
-
         colors: [
-            { name: "Red", image: "assets/images/image 824.png" },
-            { name: "Grey", image: "assets/images/image 824-1.jpeg" },
+            { name: "Red", image: "{{ 'image_824.png' | asset_url }}" },
+            { name: "Grey", image: "{{ 'image_824-1.jpeg' | asset_url }}" },
         ],
-        image: "assets/images/image 824.png", // Default image
+        image: "{{ 'image_824.png' | asset_url }}", // Default image
     },
     {
         name: "Green Trench Coat",
         price: "980,00€",
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
-            { name: "White", image: "assets/images/image 825.png" },
-            { name: "Black", image: "assets/images/image 825-1.jpeg" },
+            { name: "White", image: "{{ 'image_825.png' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_825-1.jpeg' | asset_url }}" },
         ],
-        image: "assets/images/image 825.png", // Default image
+        image: "{{ 'image_825.png' | asset_url }}", // Default image
     },
     {
-        name: " Tennis Blue T-Shirt",
+        name: "Tennis Blue T-Shirt",
         price: "980,00€",
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
-            { name: "Grey", image: "assets/images/image 826.png" },
-            { name: "Black", image: "assets/images/image 826-1.jpeg" },
+            { name: "Grey", image: "{{ 'image_826.png' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_826-1.jpeg' | asset_url }}" },
         ],
-        image: "assets/images/image 826.png", // Default image
+        image: "{{ 'image_826.png' | asset_url }}", // Default image
     },
     {
         name: "Long Sleeve Tennis Top",
         price: "980,00€",
         description: "This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief.",
         colors: [
-            { name: "Blue", image: "assets/images/image 827.png" },
-            { name: "Black", image: "assets/images/image 827-1.jpeg" },
+            { name: "Blue", image: "{{ 'image_827.png' | asset_url }}" },
+            { name: "Black", image: "{{ 'image_827-1.jpeg' | asset_url }}" },
         ],
-        image: "assets/images/image 827.png", // Default image        
+        image: "{{ 'image_827.png' | asset_url }}", // Default image
     }
 ];
 
