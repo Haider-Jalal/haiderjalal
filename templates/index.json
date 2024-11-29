@@ -11,6 +11,7 @@
   "sections": {
     "product_section_hBCQhT": {
       "type": "product-section",
+      "disabled": true,
       "settings": {}
     }
   },
