@@ -8,7 +8,7 @@ const products = [
             { name: "White", image: "{{ 'image_822.png' | asset_url }}" },
             { name: "Black", image: "{{ 'image_822-1.jpeg' | asset_url }}" },
         ],
-        image: "{{ 'image_822.png' | asset_url }}", // Default image
+        image: "{{ 'image_822.png' | asset_url }} ", // Default image
     },
     {
         name: "Tailored Jacket",
