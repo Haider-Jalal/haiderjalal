@@ -146,3 +146,29 @@ function closePopup() {
     const popup = document.getElementById("popup");
     popup.classList.add("hidden");
 }
+
+
+
+// add to cart functionality
+document.querySelector('.add-to-cart').addEventListener('click', function() {
+    const size = document.getElementById('popup-size').value;
+    const product = products[popupProductIndex]; // popupProductIndex is the index of the clicked product
+    
+    // You can modify this to add the right variant and size
+    const variantId = product.variants[0].id; // Assume variants are correctly mapped
+
+    // AJAX call to add the product to the cart
+    fetch('/cart/add.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            items: [{ id: variantId, quantity: 1, properties: { Size: size } }]
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Product added to cart:', data);
+        closePopup();
+    })
+    .catch(error => console.error('Error adding to cart:', error));
+});
