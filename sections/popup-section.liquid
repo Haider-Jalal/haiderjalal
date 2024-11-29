@@ -1,6 +1,58 @@
+<link rel="stylesheet" href="{{ 'custom-style.css' | asset_url }}">
+<script src="{{ 'custom-script.js' | asset_url }}" defer></script>
+
+<!-- Popup Section -->
+<div id="popup" class="popup hidden">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <div class="popup-layout">
+      <img id="popup-image" src="" alt="Product Image" class="popup-image" width="120" height="140">
+      <div class="popup-details">
+        <h3 id="popup-name" class="popup-name"></h3>
+        <p id="popup-price" class="popup-price"></p>
+        <p id="popup-description" class="popup-description"></p>
+      </div>
+    </div>
+    <div class="color-section">
+      <p>Color</p>
+      <div id="color-buttons-container" class="color-buttons-container">
+        <button class="color-button" onclick="changeColor(0)">White</button>
+        <button class="color-button" onclick="changeColor(1)">Black</button>
+      </div>
+    </div>
+
+    <div class="size-section">
+      <p>Size</p>
+      <select id="popup-size" class="size-dropdown">
+        <option value="" disabled selected>Choose Your Size</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+      </select>
+    </div>
+
+    <button class="add-to-cart">
+      Add to Cart
+      <img src="{{ 'Line 15.png' | asset_url }}" alt="Arrow" class="arrow-icon" width="20" height="20">
+    </button>
+  </div>
+</div>
+
+<!-- Make sure to link your external styles and scripts in the theme's settings -->
+
+<!-- Schema definition for Shopify -->
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Product Section",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom"
+    }
+  ]
+}
 {% endschema %}
